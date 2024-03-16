@@ -26,6 +26,12 @@ public class PlayerHealth : MonoBehaviour
 
         DrawHealthBar();
     }
+    public void AddHealth(float amout)
+    {
+        value += amout;
+        value = Mathf.Clamp(value, 0, _maxValue);
+        DrawHealthBar();
+    }
 
     private void PlayerIsDead()
     {
